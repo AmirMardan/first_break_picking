@@ -227,7 +227,7 @@ def _check_device(device: str):
                 f"but {device} is entered.")
         
     if isinstance(device, str):
-        if device not in ["cpu", "mps", "mps"]:
+        if device not in ["cpu", "mps", "cuda"]:
             __device_error(device)
             
     elif isinstance(device, torch.device):
